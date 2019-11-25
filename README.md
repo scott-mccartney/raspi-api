@@ -46,4 +46,7 @@
 	```
 	- Use "Remote Explorer" or open Remote-SSH to open SSH connection
 	- Sign in with password
+- Port Forwarding
+	- https://blog.cloudboost.io/how-to-run-a-nodejs-web-server-on-a-raspberry-pi-for-development-3ef9ac0fc02c
+	- For ZyXEL Router, follow following guide: https://www.noip.com/support/knowledgebase/setting-port-forwarding-zyxel-router/
 	

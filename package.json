@@ -2,9 +2,9 @@
   "name": "raspi-api",
   "version": "1.0.0",
   "description": "Test API",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node server.js",
     "test": "test"
   },
   "keywords": [

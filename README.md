@@ -47,6 +47,15 @@
 	- Use "Remote Explorer" or open Remote-SSH to open SSH connection
 	- Sign in with password
 - Port Forwarding
-	- https://blog.cloudboost.io/how-to-run-a-nodejs-web-server-on-a-raspberry-pi-for-development-3ef9ac0fc02c
-	- For ZyXEL Router, follow following guide: https://www.noip.com/support/knowledgebase/setting-port-forwarding-zyxel-router/
+	- https://www.cincinnatibell.com/help-center/internet/wifi-setup-and-password/how-do-i-set-up-port-forwarding-on-my-zyxel-14-(1)
+	- Check "Active"
+	- Service Name: RaspberryPi (Or whatever name you want)
+	- WAN Interface: Ethernet_DEFAULT
+	- WAN IP: *leave blank*
+	- Start Port: 9876
+	- End Port: 9876 (end of range for port forwarding)
+	- Translation Start Port: 9876
+	- Translation End Port: 9876
+	- Server IP Address: 192.168.200.183 (Result of IP address above)
+	- Protocol: TCP/UDP
 	

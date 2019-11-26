@@ -4,7 +4,7 @@
   "description": "Test API",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/server.js",
     "test": "test"
   },
   "keywords": [
@@ -14,6 +14,7 @@
   "author": "scott-mccartney",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
   }
 }

@@ -1,35 +1,17 @@
 const app = require('express')();
-var socket = require('socket.io');
+const socket = require('socket.io');
 const PiCamera = require('pi-camera');
+const controller = require('./api/controller');
+const piSocket = require('./socket/pi-socket');
 
 const PORT_NO = 9876;
-const HEALTH_STATUS = { healthy: true };
 
 console.log('Starting API...');
-
-app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/index.html');
-});
-
-app.get('/health', function (req, res) {
-	res.send(HEALTH_STATUS);
-});
+controller.mapEndpoints(app);
 
 var server = app.listen(PORT_NO, () => console.log(`Listening on Port ${PORT_NO}`));
 
-let io = socket(server)
-io.on('connection', onConnect);
-
-function onConnect (socket) {
-  console.log(`${socket.id} is connected`);
-  socket.on('disconnect', (reason) => {
-    console.log(`${socket.id} disconnected`)
-  });
-
-  socket.on('timecheck', (data) => {
-    console.log(data);
-  });
-}
+piSocket.configureSocket(server, socket);
 
 const myCamera = new PiCamera({
   mode: 'photo',
